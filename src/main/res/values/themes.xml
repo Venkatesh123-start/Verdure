@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Verdure" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary branding color -->
+        <item name="colorPrimary">@color/verdure_green</item>
+        <item name="colorPrimaryVariant">@color/verdure_green_light</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Use android:colorBackground so the attribute exists -->
+        <item name="android:colorBackground">@color/verdure_bg</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/verdure_green</item>
+
+        <!-- Toolbar styling -->
+        <item name="toolbarStyle">@style/Widget.Verdure.Toolbar</item>
+    </style>
+
+    <style name="Widget.Verdure.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/verdure_green</item>
+        <item name="titleTextAppearance">@style/Verdure.Toolbar.Title</item>
+    </style>
+
+    <style name="Verdure.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
