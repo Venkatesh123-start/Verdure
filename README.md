@@ -3,7 +3,7 @@
 # 🌿 Plant Verdure
 
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)](https://www.android.com/)
-[![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg)](https://kotlinlang.org/)
+[![Java](https://img.shields.io/badge/Language-Java-blue.svg)](https://www.java.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg)](https://android-arsenal.com/api?level=21)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -49,9 +49,9 @@ Plant Verdure is an advanced Android application that leverages the power of mac
 ## 🛠️ Tech Stack
 
 ### **Frontend**
-- **Language**: Kotlin / Java
+- **Language**: Java / XML
 - **Architecture**: MVVM (Model-View-ViewModel)
-- **UI Framework**: Android XML Layouts / Jetpack Compose
+- **UI Framework**: Android XML Layouts
 - **Material Design**: Material Design 3 Components
 
 ### **Machine Learning**
@@ -68,20 +68,20 @@ Plant Verdure is an advanced Android application that leverages the power of mac
 
 ### **Android Jetpack Components**
 - **Navigation**: Navigation Component
-- **Lifecycle**: LiveData & ViewModel
+- **Lifecycle**: LiveData & ViewModel (Java)
 - **Camera**: CameraX API
-- **Coroutines**: Kotlin Coroutines for async operations
-- **Dependency Injection**: Hilt / Koin
+- **Async Operations**: Java Threads / AsyncTask (or RxJava, if required)
+- **Dependency Injection**: Dagger / Koin (Java support)
 
 ### **Image Processing**
 - **Image Capture**: CameraX
-- **Image Compression**: Glide / Coil
+- **Image Compression**: Glide / Picasso
 - **Image Cropping**: UCrop / Android Image Cropper
 
 ### **Additional Libraries**
 - **Networking**: Retrofit / OkHttp
 - **JSON Parsing**: Gson / Moshi
-- **Image Loading**: Glide / Picasso / Coil
+- **Image Loading**: Glide / Picasso
 - **Analytics**: Firebase Analytics
 - **Crash Reporting**: Firebase Crashlytics
 
@@ -199,27 +199,30 @@ When the app launches for the first time, grant the following permissions:
 
 ```
 Verdure/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/verdure/
-│   │   │   │   ├── ui/              # UI components (Activities, Fragments)
-│   │   │   │   ├── viewmodel/       # ViewModels
-│   │   │   │   ├── repository/      # Data repositories
-│   │   │   │   ├── model/           # Data models
-│   │   │   │   ├── database/        # Room database
-│   │   │   │   ├── ml/              # ML model integration
-│   │   │   │   ├── utils/           # Utility classes
-│   │   │   │   └── di/              # Dependency injection
-│   │   │   ├── res/                 # Resources (layouts, drawables, etc.)
-│   │   │   └── AndroidManifest.xml
-│   │   └── test/                    # Unit tests
-│   └── build.gradle
+├── src/
+│   ├── androidTest/                       # Instrumented UI tests (Java)
+│   ├── main/
+│   │   ├── AndroidManifest.xml
+│   │   ├── ic_launcher-playstore.png
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           ├── ui/            # UI components (Activities/Fragments - Java)
+│   │   │           ├── viewmodel/     # ViewModels (Java)
+│   │   │           ├── repository/    # Data repositories (Java)
+│   │   │           ├── model/         # Data models (Java)
+│   │   │           ├── database/      # Room database (Java)
+│   │   │           ├── ml/            # ML model integration (Java)
+│   │   │           ├── utils/         # Utility classes (Java)
+│   │   │           └── di/            # Dependency injection (Java)
+│   │   └── res/                      # Resources (layouts, drawables, etc. - XML)
+│   └── test/                         # Unit tests (Java)
 ├── gradle/
 ├── build.gradle
 ├── settings.gradle
 └── README.md
 ```
+*Note: All main app code and structure are in Java/XML, inside `com/example/` and XML resources under `res/`.*
 
 ## 🧪 Testing
 
