@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdure_bg">
+
+    <!-- Top Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Verdure"
+            app:logo="@drawable/ic_leaf_accent"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Top action row: Guides | Notifications | Reminders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlantCareGuides"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Guides"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                app:icon="@drawable/ic_guide"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:backgroundTint="@color/verdure_green"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="6dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNotifications"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Notifications"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                app:icon="@drawable/ic_notifications"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:backgroundTint="@color/verdure_blue"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReminders"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Reminders"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:gravity="center"
+                app:icon="@drawable/ic_reminder"
+                app:iconGravity="textStart"
+                app:iconPadding="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:backgroundTint="@color/verdure_green_light"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- RecyclerView: Plant list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPlants"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp"/>
+    </LinearLayout>
+
+    <!-- FAB: Add Plant (bottom-end) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddPlant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add plant"
+        app:srcCompat="@drawable/ic_plant"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/verdure_green"
+        app:layout_anchor="@id/mainContent"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="16dp" />
+
+    <!-- FAB: Logout (bottom-start) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Logout"
+        app:srcCompat="@drawable/ic_logout"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/accent"
+        app:layout_anchor="@id/mainContent"
+        app:layout_anchorGravity="bottom|start"
+        android:layout_margin="16dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

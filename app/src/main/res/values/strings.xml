@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Verdure</string>
+    <string name="login_title">Welcome to Verdure</string>
+    <string name="login_subtitle">Please login with the account you created. If you don^t have an account, tap Create account.</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="create_account">Create account</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="register_title">Create account</string>
+    <string name="register_tip">Tip: Choose a security question you can remember but others can^t guess.</string>
+    <string name="select_plant_prompt">Choose a plant (optional)</string>
+</resources>

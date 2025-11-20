@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verdure_green">#2E7D32</color>      <!-- deep green -->
+    <color name="verdure_green_light">#66BB6A</color>
+    <color name="verdure_bg">#F6FFFA</color>         <!-- very light greenish -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#263238</color>
+    <color name="text_secondary">#546E7A</color>
+    <color name="accent">#FFB300</color>             <!-- warm accent -->
+    <color name="verdure_green_dark">#2E7D32</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="verdure_blue">#1565C0</color>
+</resources>
